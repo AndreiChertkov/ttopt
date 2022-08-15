@@ -1,0 +1,751 @@
+
+--- Minimize function Ackley-10dim
+
+TTOpt        | t=   3.0 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.8 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.7 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   6.0 | ey=1.1e-01 | evals=1.0e+05
+GA           | t=   6.0 | ey=8.9e-02 | evals=1.0e+05
+GA           | t=   5.9 | ey=9.6e-02 | evals=1.0e+05
+GA           | t=   6.0 | ey=1.0e-01 | evals=1.0e+05
+GA           | t=   6.0 | ey=1.1e-01 | evals=1.0e+05
+GA           | t=   6.2 | ey=8.7e-02 | evals=1.0e+05
+GA           | t=   6.6 | ey=9.4e-02 | evals=1.0e+05
+GA           | t=   6.2 | ey=9.6e-02 | evals=1.0e+05
+GA           | t=   6.6 | ey=8.2e-02 | evals=1.0e+05
+GA           | t=   6.5 | ey=1.1e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.7 | ey=1.9e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.8 | ey=2.0e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.7e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.7e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=2.1e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.9e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.8e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.9e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.6e-01 | evals=1.0e+05
+ES-OpenAI    | t=   2.7 | ey=1.7e-01 | evals=1.0e+05
+ES-CMA       | t=  10.5 | ey=7.7e-34 | evals=1.0e+05
+ES-CMA       | t=  10.3 | ey=7.7e-34 | evals=1.0e+05
+ES-CMA       | t=  10.3 | ey=7.7e-34 | evals=1.0e+05
+ES-CMA       | t=  10.3 | ey=7.7e-34 | evals=1.0e+05
+ES-CMA       | t=  10.8 | ey=5.1e+288 | evals=1.0e+05
+ES-CMA       | t=  10.2 | ey=1.6e+01 | evals=1.0e+05
+ES-CMA       | t=  10.1 | ey=1.3e+01 | evals=1.0e+05
+ES-CMA       | t=  10.1 | ey=1.2e+01 | evals=1.0e+05
+ES-CMA       | t=  10.7 | ey=8.2e+281 | evals=1.0e+05
+ES-CMA       | t=  10.2 | ey=9.7e+00 | evals=1.0e+05
+DE           | t=  38.2 | ey=2.9e-01 | evals=1.0e+05
+DE           | t=  38.6 | ey=1.2e-01 | evals=1.0e+05
+DE           | t=  38.8 | ey=3.2e+00 | evals=1.0e+05
+DE           | t=  38.5 | ey=5.1e-03 | evals=1.0e+05
+DE           | t=  38.5 | ey=3.4e-02 | evals=1.0e+05
+DE           | t=  39.1 | ey=2.8e+00 | evals=1.0e+05
+DE           | t=  39.8 | ey=6.9e-04 | evals=1.0e+05
+DE           | t=  40.6 | ey=1.3e+00 | evals=1.0e+05
+DE           | t=  38.2 | ey=3.3e+00 | evals=1.0e+05
+DE           | t=  38.7 | ey=1.6e-01 | evals=1.0e+05
+NB           | t=  44.8 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  44.7 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  45.2 | ey=1.4e+01 | evals=1.0e+05
+NB           | t=  44.8 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  45.7 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  44.9 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  45.4 | ey=1.4e+01 | evals=1.0e+05
+NB           | t=  45.2 | ey=1.4e+01 | evals=1.0e+05
+NB           | t=  44.8 | ey=1.5e+01 | evals=1.0e+05
+NB           | t=  46.8 | ey=1.4e+01 | evals=1.0e+05
+PSO          | t=  44.2 | ey=1.5e+01 | evals=1.0e+05
+PSO          | t=  43.3 | ey=9.3e+00 | evals=1.0e+05
+PSO          | t=  49.5 | ey=1.3e+01 | evals=1.0e+05
+PSO          | t=  49.8 | ey=8.2e+00 | evals=1.0e+05
+PSO          | t=  46.5 | ey=1.6e+01 | evals=1.0e+05
+PSO          | t=  47.6 | ey=1.4e+01 | evals=1.0e+05
+PSO          | t=  49.7 | ey=1.1e+01 | evals=1.0e+05
+PSO          | t=  47.2 | ey=1.4e+01 | evals=1.0e+05
+PSO          | t=  46.2 | ey=1.1e+01 | evals=1.0e+05
+PSO          | t=  48.0 | ey=9.9e+00 | evals=1.0e+05
+
+
+
+--- Minimize function Alpine-10dim
+
+TTOpt        | t=   2.4 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.8e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=2.8e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.8e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.8e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   4.6 | ey=8.9e-03 | evals=1.0e+05
+GA           | t=   4.6 | ey=8.9e-03 | evals=1.0e+05
+GA           | t=   4.5 | ey=8.8e-03 | evals=1.0e+05
+GA           | t=   4.6 | ey=7.6e-03 | evals=1.0e+05
+GA           | t=   4.6 | ey=8.3e-03 | evals=1.0e+05
+GA           | t=   4.6 | ey=9.7e-03 | evals=1.0e+05
+GA           | t=   4.5 | ey=8.5e-03 | evals=1.0e+05
+GA           | t=   4.6 | ey=8.0e-03 | evals=1.0e+05
+GA           | t=   4.5 | ey=7.1e-03 | evals=1.0e+05
+GA           | t=   4.5 | ey=8.8e-03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.1e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.2e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.1e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.3e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.3e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.1e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.2e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.1e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.3e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=1.1e-02 | evals=1.0e+05
+ES-CMA       | t=   8.6 | ey=5.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=4.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=2.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=3.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=9.1e-01 | evals=1.0e+05
+ES-CMA       | t=   8.7 | ey=4.1e-01 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=6.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=8.7e-01 | evals=1.0e+05
+ES-CMA       | t=   8.5 | ey=4.0e-05 | evals=1.0e+05
+ES-CMA       | t=   8.4 | ey=8.7e-01 | evals=1.0e+05
+DE           | t=  37.0 | ey=1.2e-01 | evals=1.0e+05
+DE           | t=  37.0 | ey=4.1e-02 | evals=1.0e+05
+DE           | t=  37.5 | ey=7.9e-04 | evals=1.0e+05
+DE           | t=  36.9 | ey=8.5e-02 | evals=1.0e+05
+DE           | t=  36.8 | ey=8.2e-03 | evals=1.0e+05
+DE           | t=  37.9 | ey=5.7e-02 | evals=1.0e+05
+DE           | t=  36.9 | ey=4.9e-02 | evals=1.0e+05
+DE           | t=  37.6 | ey=3.0e-02 | evals=1.0e+05
+DE           | t=  40.0 | ey=4.0e-02 | evals=1.0e+05
+DE           | t=  43.1 | ey=2.2e-03 | evals=1.0e+05
+NB           | t=  49.9 | ey=7.0e+00 | evals=1.0e+05
+NB           | t=  50.9 | ey=7.3e+00 | evals=1.0e+05
+NB           | t=  48.8 | ey=6.7e+00 | evals=1.0e+05
+NB           | t=  48.1 | ey=4.8e+00 | evals=1.0e+05
+NB           | t=  46.5 | ey=8.1e+00 | evals=1.0e+05
+NB           | t=  48.8 | ey=5.1e+00 | evals=1.0e+05
+NB           | t=  44.7 | ey=7.1e+00 | evals=1.0e+05
+NB           | t=  43.3 | ey=5.6e+00 | evals=1.0e+05
+NB           | t=  44.7 | ey=8.0e+00 | evals=1.0e+05
+NB           | t=  44.1 | ey=4.9e+00 | evals=1.0e+05
+PSO          | t=  46.8 | ey=5.6e+00 | evals=1.0e+05
+PSO          | t=  47.4 | ey=6.7e+00 | evals=1.0e+05
+PSO          | t=  46.4 | ey=3.8e+00 | evals=1.0e+05
+PSO          | t=  45.1 | ey=4.7e+00 | evals=1.0e+05
+PSO          | t=  47.9 | ey=6.5e+00 | evals=1.0e+05
+PSO          | t=  46.3 | ey=6.8e+00 | evals=1.0e+05
+PSO          | t=  47.9 | ey=4.2e+00 | evals=1.0e+05
+PSO          | t=  49.0 | ey=5.5e+00 | evals=1.0e+05
+PSO          | t=  45.4 | ey=7.7e+00 | evals=1.0e+05
+PSO          | t=  48.2 | ey=1.5e+00 | evals=1.0e+05
+
+
+
+--- Minimize function Brown-10dim
+
+TTOpt        | t=   2.6 | ey=2.3e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=8.7e-14 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=4.7e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=2.5e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.6e-14 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.5e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.6e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.2e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.6e-13 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.6e-14 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   5.2 | ey=4.0e-03 | evals=1.0e+05
+GA           | t=   5.1 | ey=4.4e-03 | evals=1.0e+05
+GA           | t=   5.1 | ey=6.3e-03 | evals=1.0e+05
+GA           | t=   5.2 | ey=6.6e-03 | evals=1.0e+05
+GA           | t=   5.1 | ey=5.0e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=6.4e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=7.5e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=4.8e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=6.5e-03 | evals=1.0e+05
+GA           | t=   5.2 | ey=6.4e-03 | evals=1.0e+05
+ES-OpenAI    | t=   1.7 | ey=2.0e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.7 | ey=1.7e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.7 | ey=1.6e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.4e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.9e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=2.2e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.6e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.8e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.5e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.8 | ey=1.9e-02 | evals=1.0e+05
+ES-CMA       | t=   9.5 | ey=4.4e-77 | evals=1.0e+05
+ES-CMA       | t=   9.4 | ey=2.6e-77 | evals=1.0e+05
+ES-CMA       | t=   9.3 | ey=3.5e-77 | evals=1.0e+05
+ES-CMA       | t=   9.4 | ey=2.7e-77 | evals=1.0e+05
+ES-CMA       | t=   9.5 | ey=2.7e-76 | evals=1.0e+05
+ES-CMA       | t=   9.4 | ey=1.6e-79 | evals=1.0e+05
+ES-CMA       | t=   9.5 | ey=1.2e-76 | evals=1.0e+05
+ES-CMA       | t=   9.3 | ey=2.5e-78 | evals=1.0e+05
+ES-CMA       | t=   9.4 | ey=4.1e-76 | evals=1.0e+05
+ES-CMA       | t=   9.4 | ey=8.8e-78 | evals=1.0e+05
+DE           | t=  41.2 | ey=1.2e-02 | evals=1.0e+05
+DE           | t=  40.3 | ey=5.4e-02 | evals=1.0e+05
+DE           | t= 148.4 | ey=2.1e-31 | evals=1.0e+05
+DE           | t=  39.7 | ey=2.4e-23 | evals=1.0e+05
+DE           | t=  39.6 | ey=8.4e-03 | evals=1.0e+05
+DE           | t=  41.0 | ey=1.8e-01 | evals=1.0e+05
+DE           | t=  40.3 | ey=2.3e-05 | evals=1.0e+05
+DE           | t=  39.3 | ey=8.9e-06 | evals=1.0e+05
+DE           | t=  40.3 | ey=6.9e-02 | evals=1.0e+05
+DE           | t=  40.5 | ey=4.6e-03 | evals=1.0e+05
+NB           | t=  36.2 | ey=2.8e+01 | evals=1.0e+05
+NB           | t=  35.1 | ey=2.7e+01 | evals=1.0e+05
+NB           | t=  34.3 | ey=4.7e+01 | evals=1.0e+05
+NB           | t=  37.2 | ey=7.2e+01 | evals=1.0e+05
+NB           | t=  36.7 | ey=1.2e+01 | evals=1.0e+05
+NB           | t=  42.1 | ey=2.6e+01 | evals=1.0e+05
+NB           | t=  41.8 | ey=3.5e+01 | evals=1.0e+05
+NB           | t=  39.2 | ey=5.4e+01 | evals=1.0e+05
+NB           | t=  39.5 | ey=6.8e+01 | evals=1.0e+05
+NB           | t=  32.9 | ey=2.2e+01 | evals=1.0e+05
+PSO          | t=  48.0 | ey=2.0e+01 | evals=1.0e+05
+PSO          | t=  45.1 | ey=1.7e+01 | evals=1.0e+05
+PSO          | t=  44.3 | ey=2.5e+01 | evals=1.0e+05
+PSO          | t=  46.5 | ey=6.8e+01 | evals=1.0e+05
+PSO          | t=  46.7 | ey=2.5e+01 | evals=1.0e+05
+PSO          | t=  43.6 | ey=3.1e+01 | evals=1.0e+05
+PSO          | t=  44.4 | ey=1.1e+02 | evals=1.0e+05
+PSO          | t=  45.4 | ey=1.6e+01 | evals=1.0e+05
+PSO          | t=  45.2 | ey=1.3e+01 | evals=1.0e+05
+PSO          | t=  45.8 | ey=2.1e+01 | evals=1.0e+05
+
+
+
+--- Minimize function Exponential-10dim
+
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.7 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   4.8 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.9 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.8 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.8 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.7 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.9 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.9 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.9 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   5.1 | ey=2.0e+00 | evals=1.0e+05
+GA           | t=   4.9 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.3 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.3 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=2.0e+00 | evals=1.0e+05
+ES-CMA       | t=   8.9 | ey=2.0e+00 | evals=1.0e+05
+DE           | t=  38.5 | ey=2.7e-04 | evals=1.0e+05
+DE           | t=  39.1 | ey=5.0e-07 | evals=1.0e+05
+DE           | t=  37.2 | ey=1.3e-06 | evals=1.0e+05
+DE           | t=  39.6 | ey=6.2e-05 | evals=1.0e+05
+DE           | t=  40.7 | ey=4.4e-04 | evals=1.0e+05
+DE           | t=  40.0 | ey=9.7e-05 | evals=1.0e+05
+DE           | t=  40.3 | ey=5.0e-09 | evals=1.0e+05
+DE           | t=  39.5 | ey=5.4e-06 | evals=1.0e+05
+DE           | t=  39.9 | ey=1.2e-05 | evals=1.0e+05
+DE           | t=  39.9 | ey=6.6e-06 | evals=1.0e+05
+NB           | t=  44.6 | ey=1.5e-01 | evals=1.0e+05
+NB           | t=  44.9 | ey=1.3e-01 | evals=1.0e+05
+NB           | t=  43.3 | ey=1.1e-01 | evals=1.0e+05
+NB           | t=  45.6 | ey=1.2e-01 | evals=1.0e+05
+NB           | t=  47.3 | ey=1.4e-01 | evals=1.0e+05
+NB           | t=  46.6 | ey=1.2e-01 | evals=1.0e+05
+NB           | t=  47.2 | ey=1.0e-01 | evals=1.0e+05
+NB           | t=  47.5 | ey=1.1e-01 | evals=1.0e+05
+NB           | t=  46.0 | ey=1.4e-01 | evals=1.0e+05
+NB           | t=  46.0 | ey=1.1e-01 | evals=1.0e+05
+PSO          | t=  42.9 | ey=1.2e-01 | evals=1.0e+05
+PSO          | t=  43.2 | ey=1.0e-01 | evals=1.0e+05
+PSO          | t=  42.9 | ey=8.1e-02 | evals=1.0e+05
+PSO          | t=  44.0 | ey=3.1e-02 | evals=1.0e+05
+PSO          | t=  43.2 | ey=2.1e-01 | evals=1.0e+05
+PSO          | t=  43.3 | ey=2.1e-01 | evals=1.0e+05
+PSO          | t=  44.1 | ey=4.6e-02 | evals=1.0e+05
+PSO          | t=  42.9 | ey=1.5e-01 | evals=1.0e+05
+PSO          | t=  44.4 | ey=1.6e-03 | evals=1.0e+05
+PSO          | t=  43.0 | ey=2.4e-02 | evals=1.0e+05
+
+
+
+--- Minimize function Grienwank-10dim
+
+TTOpt        | t=   2.4 | ey=2.5e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=3.4e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=3.9e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.7e-10 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=7.4e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.2e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=3.4e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.0e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.7e-10 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=2.7e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   5.7 | ey=3.0e-04 | evals=1.0e+05
+GA           | t=   5.7 | ey=4.7e-04 | evals=1.0e+05
+GA           | t=   5.8 | ey=5.8e-04 | evals=1.0e+05
+GA           | t=   5.8 | ey=5.5e-04 | evals=1.0e+05
+GA           | t=   5.8 | ey=2.9e-04 | evals=1.0e+05
+GA           | t=   6.2 | ey=4.3e-04 | evals=1.0e+05
+GA           | t=   5.7 | ey=3.4e-04 | evals=1.0e+05
+GA           | t=   6.0 | ey=2.8e-04 | evals=1.0e+05
+GA           | t=   6.0 | ey=2.6e-04 | evals=1.0e+05
+GA           | t=   5.9 | ey=3.8e-04 | evals=1.0e+05
+ES-OpenAI    | t=   2.3 | ey=1.2e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.5 | ey=1.2e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.1e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.6 | ey=1.0e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.4 | ey=1.3e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.5 | ey=1.1e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.4 | ey=8.9e-04 | evals=1.0e+05
+ES-OpenAI    | t=   2.3 | ey=1.4e-03 | evals=1.0e+05
+ES-OpenAI    | t=   2.2 | ey=9.6e-04 | evals=1.0e+05
+ES-OpenAI    | t=   2.3 | ey=1.3e-03 | evals=1.0e+05
+ES-CMA       | t=  13.5 | ey=1.5e+290 | evals=1.0e+05
+ES-CMA       | t=  12.5 | ey=3.2e+287 | evals=1.0e+05
+ES-CMA       | t=  12.1 | ey=1.7e+287 | evals=1.0e+05
+ES-CMA       | t=  13.1 | ey=1.8e+290 | evals=1.0e+05
+ES-CMA       | t=  12.5 | ey=1.2e+290 | evals=1.0e+05
+ES-CMA       | t=  12.8 | ey=1.3e+287 | evals=1.0e+05
+ES-CMA       | t=  13.1 | ey=1.5e+290 | evals=1.0e+05
+ES-CMA       | t=  13.1 | ey=1.8e+287 | evals=1.0e+05
+ES-CMA       | t=  13.2 | ey=1.6e+290 | evals=1.0e+05
+ES-CMA       | t=  12.6 | ey=1.5e+287 | evals=1.0e+05
+DE           | t=  41.8 | ey=2.8e-01 | evals=1.0e+05
+DE           | t=  42.6 | ey=1.2e-01 | evals=1.0e+05
+DE           | t=  41.0 | ey=2.1e-01 | evals=1.0e+05
+DE           | t=  40.4 | ey=2.3e-01 | evals=1.0e+05
+DE           | t=  42.1 | ey=2.9e-01 | evals=1.0e+05
+DE           | t=  40.3 | ey=2.1e-01 | evals=1.0e+05
+DE           | t=  39.6 | ey=1.1e-01 | evals=1.0e+05
+DE           | t=  41.0 | ey=1.5e-01 | evals=1.0e+05
+DE           | t=  42.6 | ey=8.9e-02 | evals=1.0e+05
+DE           | t=  42.2 | ey=1.2e-01 | evals=1.0e+05
+NB           | t=  47.8 | ey=3.0e+01 | evals=1.0e+05
+NB           | t=  46.9 | ey=2.5e+01 | evals=1.0e+05
+NB           | t=  46.6 | ey=2.2e+01 | evals=1.0e+05
+NB           | t=  47.3 | ey=2.5e+01 | evals=1.0e+05
+NB           | t=  48.5 | ey=2.8e+01 | evals=1.0e+05
+NB           | t=  49.5 | ey=2.4e+01 | evals=1.0e+05
+NB           | t=  47.8 | ey=2.1e+01 | evals=1.0e+05
+NB           | t=  48.0 | ey=2.2e+01 | evals=1.0e+05
+NB           | t=  49.9 | ey=2.8e+01 | evals=1.0e+05
+NB           | t=  48.0 | ey=2.1e+01 | evals=1.0e+05
+PSO          | t=  46.2 | ey=2.4e+01 | evals=1.0e+05
+PSO          | t=  48.4 | ey=2.1e+01 | evals=1.0e+05
+PSO          | t=  46.4 | ey=1.6e+01 | evals=1.0e+05
+PSO          | t=  49.2 | ey=6.6e+00 | evals=1.0e+05
+PSO          | t=  48.1 | ey=4.4e+01 | evals=1.0e+05
+PSO          | t=  45.4 | ey=4.5e+01 | evals=1.0e+05
+PSO          | t=  46.9 | ey=9.5e+00 | evals=1.0e+05
+PSO          | t=  46.5 | ey=3.0e+01 | evals=1.0e+05
+PSO          | t=  45.2 | ey=1.0e+00 | evals=1.0e+05
+PSO          | t=  45.7 | ey=5.3e+00 | evals=1.0e+05
+
+
+
+--- Minimize function Michalewicz-10dim
+
+TTOpt        | t=   2.4 | ey=4.5e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=8.6e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=1.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=2.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=2.3e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=1.1e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.5e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.5e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=4.9e-03 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.7e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   5.5 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.9 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.7 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.4 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.7 | ey=1.4e+01 | evals=1.0e+05
+GA           | t=   5.7 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.6 | ey=1.2e+01 | evals=1.0e+05
+GA           | t=   5.8 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   6.0 | ey=9.7e+00 | evals=1.0e+05
+GA           | t=   5.7 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.0 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.9 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.1 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.0 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.3 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.1 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.1 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.0 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.0 | ey=9.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   2.0 | ey=9.7e+00 | evals=1.0e+05
+ES-CMA       | t=   9.7 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.8 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.8 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.9 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.8 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.6 | ey=1.8e+01 | evals=1.0e+05
+ES-CMA       | t=   9.7 | ey=1.8e+01 | evals=1.0e+05
+ES-CMA       | t=   9.7 | ey=1.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.8 | ey=1.7e+01 | evals=1.0e+05
+ES-CMA       | t=   9.7 | ey=1.8e+01 | evals=1.0e+05
+DE           | t=  41.4 | ey=2.9e-01 | evals=1.0e+05
+DE           | t=  41.8 | ey=1.7e-01 | evals=1.0e+05
+DE           | t=  40.9 | ey=5.2e-01 | evals=1.0e+05
+DE           | t=  42.0 | ey=2.1e-01 | evals=1.0e+05
+DE           | t=  42.6 | ey=1.4e-01 | evals=1.0e+05
+DE           | t=  40.7 | ey=2.7e-01 | evals=1.0e+05
+DE           | t=  41.0 | ey=4.8e-01 | evals=1.0e+05
+DE           | t=  40.2 | ey=3.0e-01 | evals=1.0e+05
+DE           | t=  42.3 | ey=1.1e-01 | evals=1.0e+05
+DE           | t=  41.2 | ey=1.3e-01 | evals=1.0e+05
+NB           | t=  41.4 | ey=5.4e+00 | evals=1.0e+05
+NB           | t=  35.0 | ey=6.7e+00 | evals=1.0e+05
+NB           | t=  41.7 | ey=7.9e+00 | evals=1.0e+05
+NB           | t=  34.5 | ey=6.2e+00 | evals=1.0e+05
+NB           | t=  42.4 | ey=7.2e+00 | evals=1.0e+05
+NB           | t=  32.4 | ey=7.0e+00 | evals=1.0e+05
+NB           | t=  33.4 | ey=7.2e+00 | evals=1.0e+05
+NB           | t=  35.7 | ey=5.8e+00 | evals=1.0e+05
+NB           | t=  37.1 | ey=7.1e+00 | evals=1.0e+05
+NB           | t=  38.0 | ey=5.5e+00 | evals=1.0e+05
+PSO          | t=  43.6 | ey=4.0e-01 | evals=1.0e+05
+PSO          | t=  44.2 | ey=4.2e-02 | evals=1.0e+05
+PSO          | t=  43.9 | ey=2.2e-01 | evals=1.0e+05
+PSO          | t=  45.0 | ey=4.1e-01 | evals=1.0e+05
+PSO          | t=  44.1 | ey=4.5e-02 | evals=1.0e+05
+PSO          | t=  44.2 | ey=5.4e-01 | evals=1.0e+05
+PSO          | t=  43.5 | ey=1.8e-01 | evals=1.0e+05
+PSO          | t=  47.5 | ey=3.0e-01 | evals=1.0e+05
+PSO          | t=  46.5 | ey=3.3e-01 | evals=1.0e+05
+PSO          | t=  47.2 | ey=4.3e-02 | evals=1.0e+05
+
+
+
+--- Minimize function Qing-10dim
+
+TTOpt        | t=   2.3 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   4.8 | ey=1.2e-01 | evals=1.0e+05
+GA           | t=   4.8 | ey=9.6e-02 | evals=1.0e+05
+GA           | t=   5.4 | ey=1.3e-01 | evals=1.0e+05
+GA           | t=   5.1 | ey=9.6e-02 | evals=1.0e+05
+GA           | t=   5.1 | ey=1.2e-01 | evals=1.0e+05
+GA           | t=   5.2 | ey=1.1e-01 | evals=1.0e+05
+GA           | t=   5.2 | ey=1.3e-01 | evals=1.0e+05
+GA           | t=   5.1 | ey=1.3e-01 | evals=1.0e+05
+GA           | t=   4.7 | ey=1.3e-01 | evals=1.0e+05
+GA           | t=   4.9 | ey=1.1e-01 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.1e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.9e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.5e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.5e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.7e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.5e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=5.3e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.5e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=3.8e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.2 | ey=4.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   8.9 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=5.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=5.5e-02 | evals=1.0e+05
+DE           | t=  42.3 | ey=1.2e-06 | evals=1.0e+05
+DE           | t=  41.7 | ey=1.2e-01 | evals=1.0e+05
+DE           | t=  40.2 | ey=3.1e-01 | evals=1.0e+05
+DE           | t=  40.3 | ey=5.5e-01 | evals=1.0e+05
+DE           | t=  40.3 | ey=2.4e-03 | evals=1.0e+05
+DE           | t=  42.1 | ey=1.1e-02 | evals=1.0e+05
+DE           | t=  41.5 | ey=6.3e-01 | evals=1.0e+05
+DE           | t=  40.8 | ey=9.8e-07 | evals=1.0e+05
+DE           | t=  41.8 | ey=3.7e-01 | evals=1.0e+05
+DE           | t=  42.4 | ey=3.9e-03 | evals=1.0e+05
+NB           | t=  40.8 | ey=3.7e+10 | evals=1.0e+05
+NB           | t=  39.5 | ey=2.3e+10 | evals=1.0e+05
+NB           | t=  46.3 | ey=2.9e+10 | evals=1.0e+05
+NB           | t=  39.2 | ey=2.4e+10 | evals=1.0e+05
+NB           | t=  42.2 | ey=2.3e+10 | evals=1.0e+05
+NB           | t=  38.4 | ey=1.6e+10 | evals=1.0e+05
+NB           | t=  40.3 | ey=1.8e+10 | evals=1.0e+05
+NB           | t=  39.2 | ey=3.3e+10 | evals=1.0e+05
+NB           | t=  37.0 | ey=3.2e+10 | evals=1.0e+05
+NB           | t=  37.6 | ey=2.7e+10 | evals=1.0e+05
+PSO          | t=  46.6 | ey=1.5e+10 | evals=1.0e+05
+PSO          | t=  47.8 | ey=1.5e+10 | evals=1.0e+05
+PSO          | t=  46.7 | ey=2.4e+10 | evals=1.0e+05
+PSO          | t=  46.8 | ey=1.7e+10 | evals=1.0e+05
+PSO          | t=  47.7 | ey=1.7e+10 | evals=1.0e+05
+PSO          | t=  46.8 | ey=2.4e+10 | evals=1.0e+05
+PSO          | t=  46.2 | ey=2.1e+10 | evals=1.0e+05
+PSO          | t=  47.1 | ey=1.9e+10 | evals=1.0e+05
+PSO          | t=  44.7 | ey=3.2e+10 | evals=1.0e+05
+PSO          | t=  44.2 | ey=1.5e+10 | evals=1.0e+05
+
+
+
+--- Minimize function Rastrigin-10dim
+
+TTOpt        | t=   2.3 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.8 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.7 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   5.2 | ey=7.8e-01 | evals=1.0e+05
+GA           | t=   5.2 | ey=8.7e-01 | evals=1.0e+05
+GA           | t=   5.0 | ey=8.3e-01 | evals=1.0e+05
+GA           | t=   5.3 | ey=8.7e-01 | evals=1.0e+05
+GA           | t=   5.0 | ey=9.1e-01 | evals=1.0e+05
+GA           | t=   5.1 | ey=7.6e-01 | evals=1.0e+05
+GA           | t=   5.0 | ey=7.5e-01 | evals=1.0e+05
+GA           | t=   5.1 | ey=8.0e-01 | evals=1.0e+05
+GA           | t=   4.8 | ey=6.8e-01 | evals=1.0e+05
+GA           | t=   4.7 | ey=6.3e-01 | evals=1.0e+05
+ES-OpenAI    | t=   1.2 | ey=2.2e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.3 | ey=2.4e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=1.9e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=1.8e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=2.5e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=2.1e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=2.1e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=2.2e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=1.6e+00 | evals=1.0e+05
+ES-OpenAI    | t=   1.4 | ey=1.8e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=3.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=9.9e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=9.9e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=7.0e+00 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=2.5e+02 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=8.9e+01 | evals=1.0e+05
+ES-CMA       | t=   9.0 | ey=1.6e+02 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=2.0e-19 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=1.6e+02 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=2.5e+02 | evals=1.0e+05
+DE           | t=  41.3 | ey=9.1e+00 | evals=1.0e+05
+DE           | t=  41.7 | ey=4.3e+00 | evals=1.0e+05
+DE           | t=  42.6 | ey=9.4e+00 | evals=1.0e+05
+DE           | t=  40.1 | ey=8.1e+00 | evals=1.0e+05
+DE           | t=  41.2 | ey=5.0e+00 | evals=1.0e+05
+DE           | t=  42.1 | ey=4.1e+00 | evals=1.0e+05
+DE           | t=  40.7 | ey=1.6e+00 | evals=1.0e+05
+DE           | t=  39.6 | ey=7.6e+00 | evals=1.0e+05
+DE           | t=  41.7 | ey=8.2e+00 | evals=1.0e+05
+DE           | t=  42.2 | ey=4.7e+00 | evals=1.0e+05
+NB           | t=  50.0 | ey=4.6e+01 | evals=1.0e+05
+NB           | t=  48.4 | ey=5.5e+01 | evals=1.0e+05
+NB           | t=  46.4 | ey=8.4e+01 | evals=1.0e+05
+NB           | t=  44.4 | ey=7.4e+01 | evals=1.0e+05
+NB           | t=  43.4 | ey=7.3e+01 | evals=1.0e+05
+NB           | t=  44.0 | ey=5.9e+01 | evals=1.0e+05
+NB           | t=  43.3 | ey=5.6e+01 | evals=1.0e+05
+NB           | t=  43.1 | ey=6.3e+01 | evals=1.0e+05
+NB           | t=  43.3 | ey=5.2e+01 | evals=1.0e+05
+NB           | t=  43.2 | ey=6.6e+01 | evals=1.0e+05
+PSO          | t=  43.2 | ey=8.2e+00 | evals=1.0e+05
+PSO          | t=  42.5 | ey=4.0e+01 | evals=1.0e+05
+PSO          | t=  43.6 | ey=8.4e+00 | evals=1.0e+05
+PSO          | t=  42.4 | ey=4.4e+01 | evals=1.0e+05
+PSO          | t=  42.7 | ey=1.3e+01 | evals=1.0e+05
+PSO          | t=  42.1 | ey=4.3e+01 | evals=1.0e+05
+PSO          | t=  41.6 | ey=9.0e+00 | evals=1.0e+05
+PSO          | t=  43.5 | ey=3.7e+01 | evals=1.0e+05
+PSO          | t=  41.9 | ey=2.0e+00 | evals=1.0e+05
+PSO          | t=  44.2 | ey=2.8e+01 | evals=1.0e+05
+
+
+
+--- Minimize function Schaffer-10dim
+
+TTOpt        | t=   2.3 | ey=3.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=1.6e-10 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=5.8e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=1.7e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=9.5e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=3.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=3.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=1.6e-10 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=3.7e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.3 | ey=1.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   5.1 | ey=5.9e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=6.8e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=5.1e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=6.1e-03 | evals=1.0e+05
+GA           | t=   5.1 | ey=4.7e-03 | evals=1.0e+05
+GA           | t=   5.1 | ey=5.0e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=7.1e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=6.9e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=7.3e-03 | evals=1.0e+05
+GA           | t=   5.0 | ey=7.3e-03 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=2.0e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.7e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.6e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.4e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.7 | ey=1.9e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=2.2e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.7e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.8e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.5e-02 | evals=1.0e+05
+ES-OpenAI    | t=   1.6 | ey=1.9e-02 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=3.5e-01 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=3.5e-02 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=2.7e-01 | evals=1.0e+05
+ES-CMA       | t=   9.2 | ey=3.7e-01 | evals=1.0e+05
+ES-CMA       | t=  12.5 | ey=1.7e+290 | evals=1.0e+05
+ES-CMA       | t=  12.1 | ey=1.5e+287 | evals=1.0e+05
+ES-CMA       | t=  12.7 | ey=1.6e+290 | evals=1.0e+05
+ES-CMA       | t=  12.5 | ey=1.6e+287 | evals=1.0e+05
+ES-CMA       | t=  13.1 | ey=2.1e+290 | evals=1.0e+05
+ES-CMA       | t=  11.9 | ey=2.7e+287 | evals=1.0e+05
+DE           | t=  37.8 | ey=6.9e-01 | evals=1.0e+05
+DE           | t=  37.8 | ey=8.6e-01 | evals=1.0e+05
+DE           | t=  37.7 | ey=5.2e-01 | evals=1.0e+05
+DE           | t=  37.6 | ey=7.0e-01 | evals=1.0e+05
+DE           | t=  38.5 | ey=6.0e-01 | evals=1.0e+05
+DE           | t=  38.3 | ey=8.9e-01 | evals=1.0e+05
+DE           | t=  37.9 | ey=5.9e-01 | evals=1.0e+05
+DE           | t=  38.3 | ey=4.6e-01 | evals=1.0e+05
+DE           | t=  37.9 | ey=8.7e-01 | evals=1.0e+05
+DE           | t=  38.0 | ey=4.3e-01 | evals=1.0e+05
+NB           | t=  44.3 | ey=3.5e+00 | evals=1.0e+05
+NB           | t=  43.7 | ey=2.6e+00 | evals=1.0e+05
+NB           | t=  43.7 | ey=3.7e+00 | evals=1.0e+05
+NB           | t=  44.4 | ey=3.5e+00 | evals=1.0e+05
+NB           | t=  44.0 | ey=3.6e+00 | evals=1.0e+05
+NB           | t=  44.4 | ey=3.7e+00 | evals=1.0e+05
+NB           | t=  44.1 | ey=3.6e+00 | evals=1.0e+05
+NB           | t=  44.1 | ey=3.3e+00 | evals=1.0e+05
+NB           | t=  44.1 | ey=3.3e+00 | evals=1.0e+05
+NB           | t=  43.8 | ey=3.7e+00 | evals=1.0e+05
+PSO          | t=  42.2 | ey=4.5e-01 | evals=1.0e+05
+PSO          | t=  43.1 | ey=6.0e-01 | evals=1.0e+05
+PSO          | t=  42.5 | ey=5.3e-01 | evals=1.0e+05
+PSO          | t=  42.8 | ey=1.4e-01 | evals=1.0e+05
+PSO          | t=  43.9 | ey=8.7e-01 | evals=1.0e+05
+PSO          | t=  41.6 | ey=2.0e-01 | evals=1.0e+05
+PSO          | t=  42.6 | ey=4.4e-01 | evals=1.0e+05
+PSO          | t=  45.3 | ey=9.2e-01 | evals=1.0e+05
+PSO          | t=  43.6 | ey=2.8e-01 | evals=1.0e+05
+PSO          | t=  44.0 | ey=6.4e-01 | evals=1.0e+05
+
+
+
+--- Minimize function Schwefel-10dim
+
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.6 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.5 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+TTOpt        | t=   2.4 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+GA           | t=   4.7 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-OpenAI    | t=   1.1 | ey=4.2e+03 | evals=1.0e+05
+ES-CMA       | t=   8.8 | ey=3.5e+03 | evals=1.0e+05
+ES-CMA       | t=   8.8 | ey=2.8e+03 | evals=1.0e+05
+ES-CMA       | t=   9.3 | ey=8.7e+282 | evals=1.0e+05
+ES-CMA       | t=   8.8 | ey=3.5e+03 | evals=1.0e+05
+ES-CMA       | t=   8.8 | ey=1.8e+03 | evals=1.0e+05
+ES-CMA       | t=   8.8 | ey=2.6e+02 | evals=1.0e+05
+ES-CMA       | t=   8.7 | ey=1.8e+03 | evals=1.0e+05
+ES-CMA       | t=   9.1 | ey=8.0e+282 | evals=1.0e+05
+ES-CMA       | t=   8.7 | ey=1.8e+03 | evals=1.0e+05
+ES-CMA       | t=   8.7 | ey=4.5e+03 | evals=1.0e+05
+DE           | t=  37.4 | ey=7.1e+02 | evals=1.0e+05
+DE           | t=  38.1 | ey=1.2e+02 | evals=1.0e+05
+DE           | t=  37.4 | ey=7.1e+02 | evals=1.0e+05
+DE           | t=  37.8 | ey=3.6e+02 | evals=1.0e+05
+DE           | t=  37.6 | ey=2.5e+00 | evals=1.0e+05
+DE           | t=  38.9 | ey=1.2e+02 | evals=1.0e+05
+DE           | t=  37.9 | ey=7.1e+02 | evals=1.0e+05
+DE           | t=  40.1 | ey=9.6e-01 | evals=1.0e+05
+DE           | t=  42.2 | ey=4.7e+02 | evals=1.0e+05
+DE           | t=  38.9 | ey=5.9e+02 | evals=1.0e+05
+NB           | t=  45.6 | ey=3.4e+03 | evals=1.0e+05
+NB           | t=  46.1 | ey=3.4e+03 | evals=1.0e+05
+NB           | t=  46.5 | ey=3.1e+03 | evals=1.0e+05
+NB           | t=  46.8 | ey=3.4e+03 | evals=1.0e+05
+NB           | t=  48.8 | ey=3.3e+03 | evals=1.0e+05
+NB           | t=  47.8 | ey=3.4e+03 | evals=1.0e+05
+NB           | t=  46.8 | ey=2.8e+03 | evals=1.0e+05
+NB           | t=  47.0 | ey=2.9e+03 | evals=1.0e+05
+NB           | t=  46.9 | ey=3.0e+03 | evals=1.0e+05
+NB           | t=  46.9 | ey=3.1e+03 | evals=1.0e+05
+PSO          | t=  47.4 | ey=2.8e+03 | evals=1.0e+05
+PSO          | t=  47.3 | ey=2.9e+03 | evals=1.0e+05
+PSO          | t=  50.0 | ey=2.8e+03 | evals=1.0e+05
+PSO          | t=  46.7 | ey=2.8e+03 | evals=1.0e+05
+PSO          | t=  45.8 | ey=3.0e+03 | evals=1.0e+05
+PSO          | t=  45.6 | ey=2.8e+03 | evals=1.0e+05
+PSO          | t=  47.9 | ey=3.2e+03 | evals=1.0e+05
+PSO          | t=  46.6 | ey=2.8e+03 | evals=1.0e+05
+PSO          | t=  45.8 | ey=3.2e+03 | evals=1.0e+05
+PSO          | t=  48.3 | ey=2.9e+03 | evals=1.0e+05
+
+
+

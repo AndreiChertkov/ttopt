@@ -1,0 +1,5 @@
+recursive-include demo *
+recursive-include demo_calc *
+recursive-include demo_calc_2 *
+include LICENSE.txt
+include README.md

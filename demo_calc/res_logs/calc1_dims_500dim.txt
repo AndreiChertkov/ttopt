@@ -1,0 +1,111 @@
+
+--- Minimize function Ackley-10dim
+TTOpt        | t=   3.1 | ey=3.9e-06 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Alpine-10dim
+TTOpt        | t=   2.5 | ey=2.9e-07 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Brown-10dim
+TTOpt        | t=   2.6 | ey=2.3e-12 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Exponential-10dim
+TTOpt        | t=   2.5 | ey=4.4e-15 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Grienwank-10dim
+TTOpt        | t=   2.5 | ey=2.5e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Michalewicz-10dim
+TTOpt        | t=   2.6 | ey=4.5e-02 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Qing-10dim
+TTOpt        | t=   2.5 | ey=5.5e-09 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Rastrigin-10dim
+TTOpt        | t=   2.5 | ey=4.6e-11 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Schaffer-10dim
+TTOpt        | t=   2.5 | ey=3.4e-01 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Schwefel-10dim
+TTOpt        | t=   2.6 | ey=1.3e-04 | evals=1.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Ackley-50dim
+TTOpt        | t=  37.8 | ey=3.9e-06 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Alpine-50dim
+TTOpt        | t=  36.3 | ey=3.7e-06 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Brown-50dim
+TTOpt        | t=  36.8 | ey=4.9e-10 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Exponential-50dim
+TTOpt        | t=  35.6 | ey=2.2e-14 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Grienwank-50dim
+TTOpt        | t=  36.1 | ey=3.7e-02 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Qing-50dim
+TTOpt        | t=  35.6 | ey=8.9e-08 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Rastrigin-50dim
+TTOpt        | t=  35.6 | ey=2.3e-10 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Schaffer-50dim
+TTOpt        | t=  36.0 | ey=9.3e-01 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Schwefel-50dim
+TTOpt        | t=  35.7 | ey=6.4e-04 | evals=5.0e+05 | p=2, q=25, r=  4
+
+--- Minimize function Ackley-100dim
+TTOpt        | t= 131.0 | ey=3.9e-06 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Alpine-100dim
+TTOpt        | t= 129.5 | ey=5.2e-06 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Brown-100dim
+TTOpt        | t= 132.6 | ey=1.1e-09 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Exponential-100dim
+TTOpt        | t= 129.2 | ey=4.4e-14 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Grienwank-100dim
+TTOpt        | t= 130.4 | ey=3.7e-02 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Qing-100dim
+TTOpt        | t= 130.2 | ey=3.4e-07 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Rastrigin-100dim
+TTOpt        | t= 130.1 | ey=4.6e-10 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Schaffer-100dim
+TTOpt        | t= 130.6 | ey=2.2e+00 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Schwefel-100dim
+TTOpt        | t= 130.0 | ey=1.3e-03 | evals=1.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Ackley-500dim
+TTOpt        | t=3153.5 | ey=3.9e-06 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Alpine-500dim
+TTOpt        | t=3153.1 | ey=2.1e-05 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Brown-500dim
+TTOpt        | t=3205.4 | ey=4.7e-09 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Exponential-500dim
+TTOpt        | t=3131.1 | ey=1.0e+00 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Grienwank-500dim
+TTOpt        | t=3132.2 | ey=3.7e-02 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Qing-500dim
+TTOpt        | t=3123.7 | ey=5.6e+02 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Rastrigin-500dim
+TTOpt        | t=3124.0 | ey=2.3e-09 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Schaffer-500dim
+TTOpt        | t=3157.4 | ey=1.0e+01 | evals=5.0e+06 | p=2, q=25, r=  4
+
+--- Minimize function Schwefel-500dim
+TTOpt        | t=3140.7 | ey=6.4e-03 | evals=5.0e+06 | p=2, q=25, r=  4
