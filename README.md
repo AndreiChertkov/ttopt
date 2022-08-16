@@ -19,7 +19,7 @@
     ```bash
     pip install matplotlib cma nevergrad pyproj teneva
     ```
-5. Install the `ttopt` package (from the root folder of the package):
+5. Install the `ttopt` package:
     ```bash
     python setup.py install
     ```
