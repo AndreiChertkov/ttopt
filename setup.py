@@ -32,8 +32,8 @@ setup_args = dict(
     long_description=desc_long,
     long_description_content_type='text/markdown',
     author='Andrei Chertkov',
-    author_email='a.chertkov@skoltech.ru',
-    url='https://github.com/SkoltechAI/ttopt',
+    author_email='andre.chertkov@gmail.com',
+    url='https://github.com/AndreiChertkov/ttopt',
     classifiers=[
         'Development Status :: 4 - Beta', # 3 - Alpha, 5 - Production/Stable
         'License :: OSI Approved :: MIT License',
@@ -54,7 +54,7 @@ setup_args = dict(
     packages=find_packages('ttopt', './ttopt/'),
     python_requires='>=3.6',
     project_urls={
-        'Source': 'https://github.com/SkoltechAI/ttopt',
+        'Source': 'https://github.com/AndreiChertkov/ttopt',
     },
 )
 
