@@ -14,7 +14,7 @@ def find_packages(package, basepath):
 
 
 here = os.path.abspath(os.path.dirname(__file__))
-desc = 'Multivariate function minimizer based on the tensor train approach.'
+desc = 'Multivariate function optimizer based on the tensor train approach.'
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     desc_long = f.read()
 
