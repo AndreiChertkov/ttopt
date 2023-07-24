@@ -113,7 +113,11 @@ class TTOpt():
 
     """
 
-    def __init__(self, f, d, a=None, b=None, n=None, p=None, q=None, evals=None, name=None, callback=None, x_opt_real=None, y_opt_real=None, is_func=True, is_vect=True, with_cache=False, with_log=False, with_opt=False, with_full_info=False, with_wrn=True):
+    def __init__(self, f, d, a=None, b=None, n=None, p=None, q=None,
+                 evals=None, name=None, callback=None, x_opt_real=None,
+                 y_opt_real=None, is_func=True, is_vect=True, with_cache=False,
+                 with_log=False, with_opt=False, with_full_info=False,
+                 with_wrn=True):
         # Set the target function and its dimension:
         self.f = f
         self.d = int(d)
@@ -266,6 +270,8 @@ class TTOpt():
 
         if not s in self.cache:
             y = self._eval(i)
+            if y is None:
+                return y
             self.cache[s] = y
             self.cache_opt[s] = self._opt
         else:
@@ -300,7 +306,10 @@ class TTOpt():
         if not self.is_vect:
             Y, _opt = [], []
             for i in I:
-                Y.append(self.calc(i))
+                y = self.calc(i)
+                if y is None:
+                    return None
+                Y.append(y)
                 _opt.append(self._opt)
             self._opt = _opt
             return np.array(Y)
@@ -323,6 +332,8 @@ class TTOpt():
         # We add new points (J) to the storage:
         if len(J):
             Z = self._eval(J)
+            if Z is None:
+                return None
             for k, j in enumerate(J):
                 s = self.i2s(j)
                 self.cache[s] = Z[k]
@@ -517,8 +528,12 @@ class TTOpt():
 
         if self.with_opt:
             y, self._opt = self.f(x)
+            if y is None:
+                return None
         else:
             y = self.f(x)
+            if y is None:
+                return None
             self._opt = [None for _ in range(y.size)] if is_many else None
 
         self.k_evals_curr = y.size if is_many else 1
