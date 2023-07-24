@@ -90,6 +90,8 @@ def ttopt(f, n, rank=5, evals=None, Y0=None, seed=42, fs_opt=1.,
     else:
         J_list = J0
         r = [1] + [J.shape[0] for J in J_list[1:-1]] + [1]
+        for i in range(1, d):
+            r[i] = min(rank, n[i-1] * r[i-1])
 
     i_opt = None         # Approximation of argmin /argmax for tensor
     y_opt = None         # Approximation of optimum for tensor (float('inf'))
@@ -192,7 +194,7 @@ def ttopt_init(n, rank, Y0=None, seed=42, with_rank=False):
     r.append(1)
 
     rng = np.random.default_rng(seed)
-    
+
     if Y0 is None:
         Y0 = [rng.normal(size=(r[i], n[i], r[i + 1])) for i in range(d)]
 
