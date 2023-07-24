@@ -12,3 +12,4 @@ dist/
 computations_old/check/animation
 _tmp/*
 demo_calc_2/pytorch-minimize/*
+tmp.txt
