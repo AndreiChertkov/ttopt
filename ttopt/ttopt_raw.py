@@ -21,7 +21,9 @@ from .maxvol import maxvol
 from .maxvol import maxvol_rect
 
 
-def ttopt(f, n, rank=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_opt_outer=False, add_opt_rect=False, add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
+def ttopt(f, n, rank=5, evals=None, Y0=None, seed=42, fs_opt=1.,
+          add_opt_inner=True, add_opt_outer=False, add_opt_rect=False,
+          add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
     """Find the optimum element of the implicitly given multidimensional array.
 
     This function computes the minimum or maximum of the implicitly given
@@ -57,6 +59,8 @@ def ttopt(f, n, rank=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
         Y0 (list of 3D np.ndarrays): optional initial tensor in the TT-format
             (it should be represented as a list of the TT-cores). If it is not
             specified, then a random TT-tensor with TT-rank "rank" will be used.
+        seed (int): random seed for the algorithm initialization. It is used
+            only if Y0 and J0 are not set.
         fs_opt (float): the parameter of the smoothing function. If it is None,
             then "arctan" function will be used. Otherwise, the function
             "exp(-1 * fs_opt * (p - p0))" will be used.
@@ -79,7 +83,7 @@ def ttopt(f, n, rank=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
 
     # Prepare initial multi-indices for all unfolding matrices:
     if J0 is None:
-        Y0, r = ttopt_init(n, rank, Y0, with_rank=True)
+        Y0, r = ttopt_init(n, rank, Y0, seed, with_rank=True)
         J_list = [None] * (d + 1)
         for i in range(d - 1):
             J_list[i+1] = _iter(Y0[i], J_list[i], Jg_list[i], l2r=True)
@@ -178,7 +182,7 @@ def ttopt_fs(y, y0=0., opt=1.):
         return np.exp(opt * (y0 - y))
 
 
-def ttopt_init(n, rank, Y0=None, with_rank=False):
+def ttopt_init(n, rank, Y0=None, seed=42, with_rank=False):
     """Build initial approximation for the main algorithm."""
     d = len(n)
 
@@ -187,8 +191,10 @@ def ttopt_init(n, rank, Y0=None, with_rank=False):
         r.append(min(rank, n[i-1] * r[i-1]))
     r.append(1)
 
+    rng = np.random.default_rng(seed)
+    
     if Y0 is None:
-        Y0 = [np.random.randn(r[i], n[i], r[i + 1]) for i in range(d)]
+        Y0 = [rng.normal(size=(r[i], n[i], r[i + 1])) for i in range(d)]
 
     if with_rank:
         return Y0, r
