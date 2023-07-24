@@ -7,15 +7,15 @@ from .ttopt_raw import ttopt_find
 
 
 class TTOpt():
-    """Multidimensional minimizer based on the cross-maximum-volume principle.
+    """Multidimensional optimizer based on the cross-maximum-volume principle.
 
-    Class for computation of the minimum for the implicitly given d-dimensional
-    array (tensor) or a function of d-dimensional argument. An adaptive method
-    based on the tensor train (TT) approximation and the cross-maximum volume
-    principle is used. Cache of requested values (its usage leads to faster
-    computation if one point is computed for a long time) and QTT-based
-    representation of the grid (its usage in many cases leads to more accurate
-    results) are supported.
+    Class for computation of the minimum or maximum for the implicitly given
+    d-dimensional array (tensor) or a function of d-dimensional argument. An
+    adaptive method based on the tensor train (TT) approximation and the
+    cross-maximum volume principle is used. Cache of requested values (its
+    usage leads to faster computation if one point is computed for a long time)
+    and QTT-based representation of the grid (its usage in many cases leads to
+    more accurate results) are supported.
 
     Args:
         f (function): the function of interest. Its argument X should represent
@@ -34,7 +34,7 @@ class TTOpt():
             flag) which is the auxiliary quantity corresponding to the
             requested points (it is used for debugging and in specific parallel
             calculations; the value of this auxiliary quantity related to the
-            "argmin" point will be passed to "callback" function).
+            "argmin / argmax" point will be passed to "callback" function).
         d (int): number of function dimensions.
         a (float or list of len d of float): grid lower bounds for every
             dimension. If a number is given, then this value will be used for
@@ -61,17 +61,17 @@ class TTOpt():
         name (str): optional display name for the function of interest. It is
             the empty string by default.
         callback (function): optional function that will be called after each
-            optimization step (in Func.comp.min) with related info (it is used
+            optimization step (in Func.comp_opt) with related info (it is used
             for debugging and in specific parallel calculations).
-        x_min_real (list of len d): optional real value of x-minima (x). If
+        x_opt_real (list of len d): optional real value of x-minimum or maximum
+            (x). If this value is specified, then it will be used to display the
+            current approximation error within the algorithm iterations (this
+            is convenient for debugging and testing/research).
+        y_opt_real (float): optional real value of y-optima (y=f(x)). If
             this value is specified, then it will be used to display the
             current approximation error within the algorithm iterations (this
             is convenient for debugging and testing/research).
-        y_min_real (float): optional real value of y-minima (y=f(x)). If
-            this value is specified, then it will be used to display the
-            current approximation error within the algorithm iterations (this
-            is convenient for debugging and testing/research).
-        is_func (bool): if flag is True, then we minimize the function (the
+        is_func (bool): if flag is True, then we optimize the function (the
             arguments of f correspond to continuous spatial points), otherwise
             we approximate the tensor (the arguments of f correspond to
             discrete multidimensional tensor multi-indices). It is True by
@@ -108,12 +108,12 @@ class TTOpt():
         Call "calc" to evaluate function for one tensor multi-index and call
         "comp" to evaluate function in the set of multi-indices (both of these
         functions can be called regardless of the value of the flag "is_vect").
-        Call "minimize" to find the global minimum of the function of interest
-        by the TTOpt-algorithm.
+        Call "minimize" / "maximize" to find the global minimum / maximum of
+        the function of interest by the TTOpt-algorithm.
 
     """
 
-    def __init__(self, f, d, a=None, b=None, n=None, p=None, q=None, evals=None, name=None, callback=None, x_min_real=None, y_min_real=None, is_func=True, is_vect=True, with_cache=False, with_log=False, with_opt=False, with_full_info=False, with_wrn=True):
+    def __init__(self, f, d, a=None, b=None, n=None, p=None, q=None, evals=None, name=None, callback=None, x_opt_real=None, y_opt_real=None, is_func=True, is_vect=True, with_cache=False, with_log=False, with_opt=False, with_full_info=False, with_wrn=True):
         # Set the target function and its dimension:
         self.f = f
         self.d = int(d)
@@ -167,8 +167,8 @@ class TTOpt():
         self.evals = int(evals) if evals else None
         self.name = name or ''
         self.callback = callback
-        self.x_min_real = x_min_real
-        self.y_min_real = y_min_real
+        self.x_opt_real = x_opt_real
+        self.y_opt_real = y_opt_real
         self.is_func = bool(is_func)
         self.is_vect = bool(is_vect)
         self.with_cache = bool(with_cache)
@@ -189,30 +189,30 @@ class TTOpt():
         self.t_minim = 0    # Total time of work for minimizator
         self._opt = None    # Function opts related to its output
 
-        # Current minima:
-        self.i_min = None
-        self.x_min = None
+        # Current optimum:
+        self.i_opt = None
+        self.x_opt = None
 
-        # Approximations for argmin/min/opts of the function while iterations:
+        # Approximations for argopt/opt/opts of the function while iterations:
         self.I_list = []
-        self.i_min_list = []
-        self.x_min_list = []
-        self.y_min_list = []
-        self.opt_min_list = []
-        self.evals_min_list = []
-        self.cache_min_list = []
+        self.i_opt_list = []
+        self.x_opt_list = []
+        self.y_opt_list = []
+        self.opt_opt_list = []
+        self.evals_opt_list = []
+        self.cache_opt_list = []
 
     @property
     def e_x(self):
-        """Current error for approximation of argmin of the function."""
-        if self.x_min_real is not None and self.x_min is not None:
-            return np.linalg.norm(self.x_min - self.x_min_real)
+        """Current error for approximation of arg-opt of the function."""
+        if self.x_opt_real is not None and self.x_opt is not None:
+            return np.linalg.norm(self.x_opt - self.x_opt_real)
 
     @property
     def e_y(self):
-        """Current error for approximation of the minumum of the function."""
-        if self.y_min_real is not None and self.y_min is not None:
-            return np.abs(self.y_min - self.y_min_real)
+        """Current error for approximation of the optimum of the function."""
+        if self.y_opt_real is not None and self.y_opt is not None:
+            return np.abs(self.y_opt - self.y_opt_real)
 
     @property
     def k_total(self):
@@ -220,9 +220,9 @@ class TTOpt():
         return self.k_cache + self.k_evals
 
     @property
-    def opt_min(self):
-        """Current value of option of the function related to min-point."""
-        return self.opt_min_list[-1] if len(self.opt_min_list) else None
+    def opt_opt(self):
+        """Current value of option of the function related to opt-point."""
+        return self.opt_opt_list[-1] if len(self.opt_opt_list) else None
 
     @property
     def t_evals_mean(self):
@@ -235,9 +235,9 @@ class TTOpt():
         return self.t_total / self.k_total if self.k_total else 0.
 
     @property
-    def y_min(self):
-        """Current approximation of min of the function of interest."""
-        return self.y_min_list[-1] if len(self.y_min_list) else None
+    def y_opt(self):
+        """Current approximation of optimum of the function of interest."""
+        return self.y_opt_list[-1] if len(self.y_opt_list) else None
 
     def calc(self, i):
         """Calculate the function for the given multiindex.
@@ -336,14 +336,14 @@ class TTOpt():
 
         return Y
 
-    def comp_min(self, I, i_min=None, y_min=None, opt_min=None):
-        """Compute the function for the set of points and save current minimum.
+    def comp_opt(self, I, i_opt=None, y_opt=None, opt_opt=None):
+        """Compute the function for the set of points and save current optimum.
 
         This helper function (this is wrapper for function "comp") can be
         passed to the optimizer. When making requests, the optimizer must pass
         the grid points of interest (I) as arguments, as well as the current
-        approximation of the argmin (i_min), the corresponding value (y_min)
-        and related option value (opt_min).
+        approximation of the argmin / argmax (i_opt), the corresponding value
+        (y_opt) and related option value (opt_opt).
 
         """
         # We return None if the limit for function requests is exceeded:
@@ -372,44 +372,44 @@ class TTOpt():
             # The QTT is used, hence we should transform the indices:
             if I is not None:
                 I = self.qtt_parse_many(I)
-            if i_min is not None:
-                i_min = self.qtt_parse_many(i_min.reshape(1, -1))[0, :]
+            if i_opt is not None:
+                i_opt = self.qtt_parse_many(i_opt.reshape(1, -1))[0, :]
 
         Y = self.comp(I)
 
         # If this is last iteration, we should "manually" check for y_opt_new:
         if is_last:
-            i_min, y_min, opt_min = ttopt_find(
-                I, Y, self._opt, i_min, y_min, opt_min, self.is_max)
+            i_opt, y_opt, opt_opt = ttopt_find(
+                I, Y, self._opt, i_opt, y_opt, opt_opt, self.is_max)
 
-        if i_min is None:
+        if i_opt is None:
             return Y, self._opt
 
         if self.is_func:
-            x_min = self.i2x(i_min)
+            x_opt = self.i2x(i_opt)
         else:
-            x_min = i_min.copy()
+            x_opt = i_opt.copy()
 
-        self.i_min = i_min.copy()
-        self.x_min = x_min.copy()
+        self.i_opt = i_opt.copy()
+        self.x_opt = x_opt.copy()
 
-        self.y_min_list.append(y_min)
-        self.opt_min_list.append(opt_min)
-        self.evals_min_list.append(self.k_evals_curr)
-        self.cache_min_list.append(self.k_cache_curr)
+        self.y_opt_list.append(y_opt)
+        self.opt_opt_list.append(opt_opt)
+        self.evals_opt_list.append(self.k_evals_curr)
+        self.cache_opt_list.append(self.k_cache_curr)
 
         if self.with_full_info:
             self.I_list.append(I)
-            self.i_min_list.append(self.i_min.copy())
-            self.x_min_list.append(self.x_min.copy())
+            self.i_opt_list.append(self.i_opt.copy())
+            self.x_opt_list.append(self.x_opt.copy())
 
         if self.is_max:
-            is_better = len(self.y_min_list)==1 or (y_min > self.y_min_list[-2])
+            is_better = len(self.y_opt_list)==1 or (y_opt > self.y_opt_list[-2])
         else:
-            is_better = len(self.y_min_list)==1 or (y_min < self.y_min_list[-2])
+            is_better = len(self.y_opt_list)==1 or (y_opt < self.y_opt_list[-2])
 
         if self.callback and is_better:
-            last = {'last': [x_min, y_min, i_min, opt_min, self.k_evals]}
+            last = {'last': [x_opt, y_opt, i_opt, opt_opt, self.k_evals]}
             self.callback(last)
 
         if self.with_log:
@@ -455,8 +455,8 @@ class TTOpt():
         else:
             text += f't_cur={self.t_total:-8.2e} | '
 
-        if self.y_min_real is None and self.y_min is not None:
-            text += f'y={self.y_min:-13.6e} '
+        if self.y_opt_real is None and self.y_opt is not None:
+            text += f'y={self.y_opt:-13.6e} '
         else:
             if with_e_x and self.e_x is not None:
                 text += f'e_x={self.e_x:-8.2e} '
@@ -480,7 +480,7 @@ class TTOpt():
         t_minim = tpc()
         self.is_max = is_max
 
-        i_min, y_min = ttopt(self.comp_min, self.n, rmax, None, Y0,
+        i_opt, y_opt = ttopt(self.comp_opt, self.n, rmax, None, Y0,
                 fs_opt, add_opt_inner, add_opt_outer, add_opt_rect,
                 add_rnd_inner, add_rnd_outer, J0, is_max)
 

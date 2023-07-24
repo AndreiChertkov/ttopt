@@ -11,7 +11,7 @@ As a result of the script work we expect the output in console like this:
 ...
 Alpine-10d | evals=1.00e+05 | t_cur=1.59e-01 | y= 8.715206e+01
 ----------------------------------------------------------------------
-Alpine-10d | evals=1.00e+05 | t_all=2.38e+00 | y= 8.715206e+01 
+Alpine-10d | evals=1.00e+05 | t_all=2.38e+00 | y= 8.715206e+01
 "
 
 """
@@ -49,8 +49,8 @@ tto.maximize(rmax)
 
 
 # We can extract the results of the computation:
-x = tto.x_min          # The found value of the maximum of the function (x)
-y = tto.y_min          # The found value of the maximum of the function (y=f(x))
+x = tto.x_opt          # The found value of the maximum of the function (x)
+y = tto.y_opt          # The found value of the maximum of the function (y=f(x))
 k_c = tto.k_cache      # Total number of cache usage (should be 0 in this demo)
 k_e = tto.k_evals      # Total number of requests to func (is always = evals)
 k_t = tto.k_total      # Total number of requests (k_cache + k_evals)

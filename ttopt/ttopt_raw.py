@@ -1,16 +1,17 @@
-"""Multidimensional minimizer based on the cross-maximum-volume principle.
+"""Multidimensional opotimizer based on the cross-maximum-volume principle.
 
 This module contains the main function "ttopt" that finds the approximate
-minimum of the given multidimensional array (tensor), which can represent a
-discretized multivariable function.
+minimum or maximum of the given multidimensional array (tensor), which can
+represent a discretized multivariable function.
 
 Note:
     For the task of finding the extremum of a function of many variables or
     multidimensional array, a wrapper class "TTOpt" (from "ttopt.py") could be
     used. It provides a set of methods for discretizing the function, caching
     previously requested values and logging intermediate results. In this case,
-    a wrapper "TTOpt.comp_min" should be passed to the function "ttopt" as its
-    first argument (the method "TTOpt.minimize" provides the related interface).
+    a wrapper "TTOpt.comp_opt" should be passed to the function "ttopt" as its
+    first argument (the methods "TTOpt.minimize" and "TTOpt.maximize" provide
+    the related interface).
 
 """
 import numpy as np
@@ -21,30 +22,31 @@ from .maxvol import maxvol_rect
 
 
 def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_opt_outer=False, add_opt_rect=False, add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
-    """Find the minimum element of the implicitly given multidimensional array.
+    """Find the optimum element of the implicitly given multidimensional array.
 
-    This function computes the minimum of the implicitly given d-dimensional
-    (d >= 2) array (tensor). The adaptive method based on the tensor train (TT)
-    approximation and the cross-maximum-volume principle are used.
+    This function computes the minimum or maximum of the implicitly given
+    d-dimensional (d >= 2) array (tensor). The adaptive method based on the
+    TT-approximation and the cross-maximum-volume principle are used.
 
     Args:
         f (function): the function that returns tensor values for the given set
-            of the indices. Its arguments are (I, i_min, y_min, opt_min), where
+            of the indices. Its arguments are (I, i_opt, y_opt, opt_opt), where
             "I" represents several multi-indices (samples) for calculation (it
-            is 2D np.ndarray of the shape [samples, dimensions]), "i_min"
-            represents the current multi-index of the argmin approximation (it
-            is 1D np.ndarray of the shape [dimensions]; note that while the
-            first call it will be None), "y_min" represents the current
-            approximated minimum of the tensor (it is float; note that while
-            the first call it will be None) and "opt_min" is the value of the
-            auxiliary quantity corresponding to the multi-index "i_min" (it is
-            used for debugging and in specific parallel calculations). The
-            output of the function should be the corresponding values in the
-            given indices (1D np.ndarray of the shape [samples]) and related
-            values of the auxiliary quantities at the requested points (1D
-            np.ndarray of the shape [samples] of any). If the function returns
-            None instead of the tensor values, then the algorithm will be
-            interrupted and the current approximation will be returned.
+            is 2D np.ndarray of the shape [samples, dimensions]), "i_opt"
+            represents the current multi-index of the argmin/argmax
+            approximation (it is 1D np.ndarray of the shape [dimensions]; note
+            that while the first call it will be None), "y_opt" represents the
+            current approximated minimum/maximum of the tensor (it is float;
+            note that while the first call it will be None) and "opt_opt" is
+            the value of the auxiliary quantity corresponding to the multi-
+            index "i_opt" (it is used for debugging and in specific parallel
+            calculations). The output of the function should be the
+            corresponding values in the given indices (1D np.ndarray of the
+            shape [samples]) and related values of the auxiliary quantities at
+            the requested points (1D np.ndarray of the shape [samples] of any).
+            If the function returns None instead of the tensor values, then the
+            algorithm will be interrupted and the current approximation will be
+            returned.
         n (list of len d of int): number of grid points for every dimension
             (i.e., the shape of the tensor). Note that the tensor must have a
             dimension of at least 2.
@@ -60,10 +62,10 @@ def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
             "exp(-1 * fs_opt * (p - p0))" will be used.
 
     Returns:
-        [np.ndarray, float]: the multi-index that gives the minimum value of the
-        tensor (it is 1D np.ndarray of length "d" of int; i.e., "i_min") and
-        the minimum value of the tensor (it is float; i.e., "y_min") that
-        corresponds to the multi-index "i_min".
+        [np.ndarray, float]: the multi-index that gives the optimum value of the
+        tensor (it is 1D np.ndarray of length "d" of int; i.e., "i_opt") and
+        the optimum value of the tensor (it is float; i.e., "y_opt") that
+        corresponds to the multi-index "i_opt".
 
     """
     # Number of dimensions:
@@ -85,9 +87,9 @@ def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
         J_list = J0
         r = [1] + [J.shape[0] for J in J_list[1:-1]] + [1]
 
-    i_min = None         # Approximation of argmin for tensor
-    y_min = None         # Approximation of min for tensor (float('inf'))
-    opt_min = None       # Additional option related to i_min
+    i_opt = None         # Approximation of argmin /argmax for tensor
+    y_opt = None         # Approximation of optimum for tensor (float('inf'))
+    opt_opt = None       # Additional option related to i_opt
 
     eval = 0             # Number of performed calls to function
     iter = 0             # Iteration (sweep) number
@@ -104,36 +106,36 @@ def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
             I = I[:(evals-eval), :]
 
         # We compute the function of interest "f" in the sample points I:
-        y, opt = f(I, i_min, y_min, opt_min)
+        y, opt = f(I, i_opt, y_opt, opt_opt)
 
         # Function "f" can return None to interrupt the algorithm execution:
         if y is None:
-            return i_min, y_min
+            return i_opt, y_opt
 
-        # We find and check the minimum value on a set of sampled points:
-        i_min, y_min, opt_min = ttopt_find(I, y, opt, i_min, y_min, opt_min,
+        # We find and check the optimum value on a set of sampled points:
+        i_opt, y_opt, opt_opt = ttopt_find(I, y, opt, i_opt, y_opt, opt_opt,
             is_max)
 
         # If the max number of requests exceeded, we interrupt the algorithm:
         eval += y.size
         if evals is not None and eval >= evals:
-            return i_min, y_min
+            return i_opt, y_opt
 
         # If computed points less then requested, we interrupt the algorithm:
         if y.shape[0] < I.shape[0]:
-            return i_min, y_min
+            return i_opt, y_opt
 
         # We transform sampled points into "core tensor" and smooth it out:
         Z = _reshape(y, (r[i], n[i], r[i + 1]))
         if not is_max:
-            Z = ttopt_fs(Z, y_min, fs_opt)
+            Z = ttopt_fs(Z, y_opt, fs_opt)
 
         # We perform iteration:
         if l2r and i < d - 1:
             J_list[i+1] = _iter(Z, J_list[i], Jg_list[i], l2r,
                 add_opt_inner, add_opt_rect, add_rnd_inner)
             if add_opt_outer:
-                J_list[i+1] = _add_row(J_list[i+1], i_min[:(i+1)])
+                J_list[i+1] = _add_row(J_list[i+1], i_opt[:(i+1)])
             if add_rnd_outer:
                 J_list[i+1] = _add_random(J_list[i+1], n[:(i+1)])
             r[i+1] = J_list[i+1].shape[0]
@@ -141,32 +143,31 @@ def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_
             J_list[i] = _iter(Z, J_list[i+1], Jg_list[i], l2r,
                 add_opt_inner, add_opt_rect, add_rnd_inner)
             if add_opt_outer:
-                J_list[i] = _add_row(J_list[i], i_min[i:])
+                J_list[i] = _add_row(J_list[i], i_opt[i:])
             if add_rnd_outer:
                 J_list[i] = _add_random(J_list[i], n[i:])
             r[i] = J_list[i].shape[0]
 
         # We update the current core index:
         i, iter, l2r = _update_iter(d, i, iter, l2r)
+    return i_opt, y_opt
 
-    return i_min, y_min
 
-
-def ttopt_find(I, y, opt, i_min, y_min, opt_min, is_max=False):
-    """Find the minimum value on a set of sampled points."""
+def ttopt_find(I, y, opt, i_opt, y_opt, opt_opt, is_max=False):
+    """Find the minimum or maximum value on a set of sampled points."""
     if is_max:
         ind = np.argmax(y)
     else:
         ind = np.argmin(y)
-    y_min_curr = y[ind]
+    y_opt_curr = y[ind]
 
-    if is_max and y_min is not None and y_min_curr <= y_min:
-        return i_min, y_min, opt_min
+    if is_max and y_opt is not None and y_opt_curr <= y_opt:
+        return i_opt, y_opt, opt_opt
 
-    if not is_max and y_min is not None and y_min_curr >= y_min:
-        return i_min, y_min, opt_min
+    if not is_max and y_opt is not None and y_opt_curr >= y_opt:
+        return i_opt, y_opt, opt_opt
 
-    return I[ind, :], y_min_curr, opt[ind]
+    return I[ind, :], y_opt_curr, opt[ind]
 
 
 def ttopt_fs(y, y0=0., opt=1.):
@@ -207,7 +208,8 @@ def _add_row(J, i_new):
     return J_new
 
 
-def _iter(Z, J, Jg, l2r=True, add_opt_inner=True, add_opt_rect=False, add_rnd_inner=False):
+def _iter(Z, J, Jg, l2r=True, add_opt_inner=True, add_opt_rect=False,
+          add_rnd_inner=False):
     r1, n, r2 = Z.shape
 
     Z = _reshape(Z, (r1 * n, r2)) if l2r else _reshape(Z, (r1, n * r2)).T

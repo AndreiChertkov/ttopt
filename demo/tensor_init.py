@@ -51,8 +51,8 @@ tto = TTOpt(
     n=n,                    # Number of grid points (number or list of len d)
     evals=1.E+5,            # Number of function evaluations
     name='Tensor',          # Function name for log (this is optional)
-    x_min_real=x_min_real,  # Real value of x-minima (x; this is for test)
-    y_min_real=0.,          # Real value of y-minima (y=f(x); this is for test)
+    x_opt_real=x_min_real,  # Real value of x-minima (x; this is for test)
+    y_opt_real=0.,          # Real value of y-minima (y=f(x); this is for test)
     is_func=False,          # We approximate the tensor (not a function)
     with_log=True)
 
@@ -72,8 +72,8 @@ tto.minimize(rmax, J0=J0)
 
 
 # We can extract the results of the computation:
-i = tto.i_min          # The found value of the minimum (multi-index)
-y = tto.y_min          # The found value of the minimum of the function (y=f(x))
+i = tto.i_opt          # The found value of the minimum (multi-index)
+y = tto.y_opt          # The found value of the minimum of the function (y=f(x))
 k_c = tto.k_cache      # Total number of cache usage (should be 0 in this demo)
 k_e = tto.k_evals      # Total number of requests to func (is always = evals)
 k_t = tto.k_total      # Total number of requests (k_cache + k_evals)
