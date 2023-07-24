@@ -9,6 +9,6 @@
 __pycache__/
 build/
 dist/
-check/animation
+computations_old/check/animation
 _tmp/*
 demo_calc_2/pytorch-minimize/*
