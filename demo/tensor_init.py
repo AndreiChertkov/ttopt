@@ -33,7 +33,7 @@ d = 10                      # Number of function dimensions
 p = 2
 q = 10
 n = p**q                    # Mode size for the tensor
-rmax = 2                    # Maximum TT-rank while cross-like iterations
+rank = 2                    # Maximum TT-rank while cross-like iterations
 def f(I):                   # Target function (return tensor element)
     return (I[:, 0] - 2)**2 + (I[:, 1] - 3)**2 + np.sum(I[:, 2:]**4, axis=1)
 
@@ -60,15 +60,15 @@ tto = TTOpt(
 # We manually construct a set of starting multi-indices for the search (note
 # that the list contains (d+1) items, the first and last items should be None):
 J0 = [None for _ in range(d+1)]
-J0[1] = np.zeros((rmax, 1), dtype=int)
+J0[1] = np.zeros((rank, 1), dtype=int)
 for k in range(1, d-1):
-    ir = np.ones((rmax, 1), dtype=int)
+    ir = np.ones((rank, 1), dtype=int)
     ir *= 1 if k % 2 == 1 else 0
     J0[k+1] = np.hstack((J0[k], ir))
 
 
 # And now we launching the minimizer:
-tto.optimize(rmax, J0=J0)
+tto.optimize(rank, J0=J0)
 
 
 # We can extract the results of the computation:

@@ -30,7 +30,7 @@ d = 10                      # Number of function dimensions
 p = 2
 q = 10
 n = p**q                    # Mode size for the tensor
-rmax = 2                    # Maximum TT-rank while cross-like iterations
+rank = 2                    # Maximum TT-rank while cross-like iterations
 def f(I):                   # Target function (return tensor element)
     return (I[:, 0] - 2)**2 + (I[:, 1] - 3)**2 + np.sum(I[:, 2:]**4, axis=1)
 
@@ -55,7 +55,7 @@ tto = TTOpt(
 
 
 # And now we launching the minimizer:
-tto.optimize(rmax)
+tto.optimize(rank)
 
 
 # We can extract the results of the computation:

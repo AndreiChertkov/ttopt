@@ -26,7 +26,7 @@ np.random.seed(42)
 
 
 d = 5                       # Number of function dimensions:
-rmax = 4                    # Maximum TT-rank while cross-like iterations
+rank = 4                    # Maximum TT-rank while cross-like iterations
 def f(X):                   # Target function
     return np.sin(0.1 * X[:, 0])**2 + 0.1 * np.sum(X[:, 1:]**2, axis=1)
 
@@ -47,7 +47,7 @@ tto = TTOpt(
 
 
 # And now we launching the minimizer:
-tto.optimize(rmax)
+tto.optimize(rank)
 
 
 # We can extract the results of the computation:

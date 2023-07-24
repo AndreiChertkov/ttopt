@@ -465,13 +465,13 @@ class TTOpt():
 
         return text
 
-    def optimize(self, rmax=10, Y0=None, fs_opt=1., is_max=False,
+    def optimize(self, rank=10, Y0=None, fs_opt=1., is_max=False,
                  add_opt_inner=True, add_opt_outer=False, add_opt_rect=False,
                  add_rnd_inner=False, add_rnd_outer=False, J0=None):
         """Perform the function optimization process by TT-based approach.
 
         Args:
-            rmax (int): maximum TT-rank.
+            rank (int): maximum TT-rank.
             Y0 (list of 3D np.ndarrays of float): optional initial tensor in
                 the TT format as a list of the TT-cores.
             fs_opt (float): the parameter of the smoothing function. If it is
@@ -483,7 +483,7 @@ class TTOpt():
         t_minim = tpc()
         self.is_max = is_max
 
-        i_opt, y_opt = ttopt(self.comp_opt, self.n, rmax, None, Y0,
+        i_opt, y_opt = ttopt(self.comp_opt, self.n, rank, None, Y0,
                 fs_opt, add_opt_inner, add_opt_outer, add_opt_rect,
                 add_rnd_inner, add_rnd_outer, J0, is_max)
 
