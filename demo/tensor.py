@@ -8,9 +8,9 @@ Run it from the root of the project as "python demo/tensor.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Tensor-10d | k=1.00e+05 | t_cur=9.04e-03 | e_x=0.00e+00 e_y=0.00e+00
+Tensor-10d | evals=1.00e+05 | t_cur=8.64e-03 | e_x=0.00e+00 e_y=0.00e+00
 ----------------------------------------------------------------------
-Tensor-10d | k=1.00e+05 | t_all=1.21e-01 | e_x=0.00e+00 e_y=0.00e+00
+Tensor-10d | evals=1.00e+05 | t_all=2.03e-01 | e_x=0.00e+00 e_y=0.00e+00
 y_opt :  0
 i_opt :  [2 3 0 0 0 0 0 0 0 0]
 "

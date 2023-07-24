@@ -8,9 +8,9 @@ Run it from the root of the project as "python demo/cache.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Simple-5d | k=9.86e+03+2.69e+03 | t_cur=7.36e-02 | e_x=3.55e-02 e_y=1.03e-04
+Simple-5d  | evals=9.80e+03+3.01e+03 | t_cur=6.47e-02 | e_x=3.55e-02 e_y=1.03e-04
 ----------------------------------------------------------------------
-Simple-5d | k=9.86e+03+2.69e+03 | t_all=8.88e-02 | e_x=3.55e-02 e_y=1.03e-04
+Simple-5d  | evals=9.80e+03+3.01e+03 | t_all=7.61e-02 | e_x=3.55e-02 e_y=1.03e-04 
 "
 
 """

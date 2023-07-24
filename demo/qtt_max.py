@@ -9,9 +9,9 @@ Run it from the root of the project as "python demo/qtt_max.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Alpine-10d | evals=1.00e+05 | t_cur=1.59e-01 | y= 8.715206e+01
+Alpine-10d | evals=1.00e+05 | t_cur=1.65e-01 | y= 8.715206e+01
 ----------------------------------------------------------------------
-Alpine-10d | evals=1.00e+05 | t_all=2.38e+00 | y= 8.715206e+01
+Alpine-10d | evals=1.00e+05 | t_all=2.22e+00 | y= 8.715206e+01 
 "
 
 """

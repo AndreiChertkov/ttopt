@@ -12,9 +12,9 @@ Run it from the root of the project as "python demo/qtt.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Alpine-10d | k=1.00e+05 | t_cur=1.66e-01 | e_x=3.32e+00 e_y=6.22e-06
+Alpine-10d | evals=1.00e+05 | t_cur=1.62e-01 | e_x=3.42e+00 e_y=4.23e-06
 ----------------------------------------------------------------------
-Alpine-10d | k=1.00e+05 | t_all=2.56e+00 | e_x=3.32e+00 e_y=6.22e-06
+Alpine-10d | evals=1.00e+05 | t_all=2.28e+00 | e_x=3.42e+00 e_y=4.23e-06
 "
 
 """

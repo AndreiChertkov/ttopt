@@ -9,9 +9,9 @@ Run it from the root of the project as "python demo/qtt_100d.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Alpine-100d | k=1.00e+05 | t_cur=3.47e-01 | e_x=1.08e+01 e_y=5.49e-03
+Alpine-100d | evals=1.00e+05 | t_cur=2.87e-01 | e_x=1.16e+01 e_y=2.29e-02
 ----------------------------------------------------------------------
-Alpine-100d | k=1.00e+05 | t_all=8.98e+00 | e_x=1.08e+01 e_y=5.49e-03
+Alpine-100d | evals=1.00e+05 | t_all=6.89e+00 | e_x=1.16e+01 e_y=2.29e-02
 "
 
 """

@@ -8,9 +8,9 @@ Run it from the root of the project as "python demo/vect.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Simple-5d | k=1.00e+04 | t_cur=1.54e-01 | e_x=3.55e-02 e_y=1.03e-04
+Simple-5d  | evals=1.00e+04 | t_cur=1.38e-01 | e_x=3.55e-02 e_y=1.03e-04
 ----------------------------------------------------------------------
-Simple-5d | k=1.00e+04 | t_all=1.75e-01 | e_x=3.55e-02 e_y=1.03e-04
+Simple-5d  | evals=1.00e+04 | t_all=1.53e-01 | e_x=3.55e-02 e_y=1.03e-04 
 "
 
 """

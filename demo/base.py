@@ -9,9 +9,9 @@ Run it from the root of the project as "python demo/base.py".
 As a result of the script work we expect the output in console like this:
 "
 ...
-Alpine-10d | k=1.00e+05 | t_cur=2.39e-02 | e_x=5.02e-01 e_y=9.22e-02
+Alpine-10d | evals=1.00e+05 | t_cur=2.23e-02 | e_x=5.02e-01 e_y=9.22e-02
 ----------------------------------------------------------------------
-Alpine-10d | k=1.00e+05 | t_all=1.12e-01 | e_x=5.02e-01 e_y=9.22e-02
+Alpine-10d | evals=1.00e+05 | t_all=8.37e-02 | e_x=5.02e-01 e_y=9.22e-02
 "
 
 """
