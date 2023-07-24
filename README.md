@@ -12,7 +12,7 @@ Gradient-free optimization method for multivariable functions based on the low r
 
 You can install the `ttopt` package for `python >= 3.7` with pip:
 ```bash
-pip install ttopt==0.6.0
+pip install ttopt==0.6.1
 ```
 
 
