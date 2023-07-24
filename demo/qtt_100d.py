@@ -47,7 +47,7 @@ tto = TTOpt(
 
 
 # And now we launching the minimizer:
-tto.minimize(rmax)
+tto.optimize(rmax)
 
 
 # We can extract the results of the computation:

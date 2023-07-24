@@ -68,7 +68,7 @@ for k in range(1, d-1):
 
 
 # And now we launching the minimizer:
-tto.minimize(rmax, J0=J0)
+tto.optimize(rmax, J0=J0)
 
 
 # We can extract the results of the computation:

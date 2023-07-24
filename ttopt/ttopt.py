@@ -465,8 +465,10 @@ class TTOpt():
 
         return text
 
-    def minimize(self, rmax=10, Y0=None, fs_opt=1., add_opt_inner=True, add_opt_outer=False, add_opt_rect=False, add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
-        """Perform the function minimization process by TT-based approach.
+    def optimize(self, rmax=10, Y0=None, fs_opt=1., is_max=False,
+                 add_opt_inner=True, add_opt_outer=False, add_opt_rect=False,
+                 add_rnd_inner=False, add_rnd_outer=False, J0=None):
+        """Perform the function optimization process by TT-based approach.
 
         Args:
             rmax (int): maximum TT-rank.
@@ -475,6 +477,7 @@ class TTOpt():
             fs_opt (float): the parameter of the smoothing function. If it is
                 None, then "arctan" function will be used. Otherwise, the
                 function "exp(-1 * fs_opt * (p - p0))" will be used.
+            is_max (bool): if flag is True, then maximization will be performed.
 
         """
         t_minim = tpc()
@@ -485,16 +488,6 @@ class TTOpt():
                 add_rnd_inner, add_rnd_outer, J0, is_max)
 
         self.t_minim = tpc() - t_minim
-
-    def maximize(self, rmax=10, Y0=None, fs_opt=1., add_opt_inner=True, add_opt_outer=False, add_opt_rect=False, add_rnd_inner=False, add_rnd_outer=False, J0=None):
-        """Perform the function maximization process by TT-based approach.
-
-        Note:
-            See description of parameters in "minimize" function.
-
-        """
-        return self.minimize(rmax, Y0, fs_opt, add_opt_inner, add_opt_outer,
-            add_opt_rect, add_rnd_inner, add_rnd_outer, J0, is_max=True)
 
     def qtt_parse_many(self, I_qtt):
         """Transform tensor indices from QTT (long) to base (short) format."""
