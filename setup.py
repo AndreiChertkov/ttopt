@@ -25,6 +25,11 @@ with open(os.path.join(here, 'ttopt/__init__.py'), encoding='utf-8') as f:
     version = version.group(1)
 
 
+with open(os.path.join(here, 'requirements.txt'), encoding='utf-8') as f:
+    requirements = f.read().split('\n')
+    requirements = [r for r in requirements if len(r) >= 3]
+
+
 setup_args = dict(
     name='ttopt',
     version=version,
@@ -45,14 +50,13 @@ setup_args = dict(
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
     keywords='function optimization function minimization low-rank representation tensor train format TT-decomposition cross approximation',
     packages=find_packages('ttopt', './ttopt/'),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     project_urls={
         'Source': 'https://github.com/AndreiChertkov/ttopt',
     },
@@ -62,6 +66,5 @@ setup_args = dict(
 if __name__ == '__main__':
     setup(
         **setup_args,
-        # Please, install it manually:
-        # install_requires=['numpy', 'scipy', 'maxvolpy'],
+        install_requires=requirements,
         include_package_data=True)
