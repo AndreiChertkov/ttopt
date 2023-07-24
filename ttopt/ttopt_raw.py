@@ -13,17 +13,11 @@ Note:
     first argument (the method "TTOpt.minimize" provides the related interface).
 
 """
-try:
-    from maxvolpy.maxvol import maxvol
-    from maxvolpy.maxvol import rect_maxvol
-    WITH_MAXVOLPY = True
-except Exception as e:
-    from teneva import maxvol
-    from teneva import maxvol_rect as rect_maxvol
-    WITH_MAXVOLPY = False
-
-
 import numpy as np
+
+
+from .maxvol import maxvol
+from .maxvol import maxvol_rect
 
 
 def ttopt(f, n, rmax=5, evals=None, Y0=None, fs_opt=1., add_opt_inner=True, add_opt_outer=False, add_opt_rect=False, add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
@@ -168,7 +162,7 @@ def ttopt_find(I, y, opt, i_min, y_min, opt_min, is_max=False):
 
     if is_max and y_min is not None and y_min_curr <= y_min:
         return i_min, y_min, opt_min
-        
+
     if not is_max and y_min is not None and y_min_curr >= y_min:
         return i_min, y_min, opt_min
 
@@ -243,32 +237,8 @@ def _maxvol(A, tol=1.001, max_iters=1000, is_rect=False):
     if n <= r:
         return np.arange(n, dtype=int)
 
-    if WITH_MAXVOLPY:
-        return _maxvol_maxvolpy(A, tol, max_iters, is_rect)
-    else:
-        return _maxvol_teneva(A, tol, max_iters, is_rect)
-
-
-def _maxvol_maxvolpy(A, tol=1.001, max_iters=1000, is_rect=False):
     if is_rect:
-        tol_rect = 1.
-        kickrank = 1
-        rf = 1.
-
-        if kickrank is not None and rf is not None:
-            maxK = A.shape[1] + kickrank + rf
-        else:
-            maxK = None
-
-        return rect_maxvol(A, tol=tol_rect, min_add_K=kickrank, maxK=maxK,
-            start_maxvol_iters=10, identity_submatrix=False)[0]
-    else:
-        return maxvol(A, tol=tol, max_iters=max_iters)[0]
-
-
-def _maxvol_teneva(A, tol=1.001, max_iters=1000, is_rect=False):
-    if is_rect:
-        return rect_maxvol(A, e=1., dr_min=1, dr_max=2)[0]
+        return maxvol_rect(A, e=1., dr_min=1, dr_max=2)[0]
     else:
         return maxvol(A, e=tol, k=max_iters)[0]
 
