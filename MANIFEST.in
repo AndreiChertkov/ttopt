@@ -1,3 +1,4 @@
 recursive-include demo *
 include LICENSE.txt
 include README.md
+include requirements.txt
