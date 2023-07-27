@@ -476,7 +476,7 @@ class TTOpt():
 
         return text
 
-    def optimize(self, rank=10, Y0=None, seed=42, fs_opt=1., is_max=False,
+    def optimize(self, rank=4, Y0=None, seed=42, fs_opt=1., is_max=False,
                  add_opt_inner=True, add_opt_outer=False, add_opt_rect=False,
                  add_rnd_inner=False, add_rnd_outer=False, J0=None):
         """Perform the function optimization process by TT-based approach.

@@ -21,7 +21,7 @@ from .maxvol import maxvol
 from .maxvol import maxvol_rect
 
 
-def ttopt(f, n, rank=5, evals=None, Y0=None, seed=42, fs_opt=1.,
+def ttopt(f, n, rank=4, evals=None, Y0=None, seed=42, fs_opt=1.,
           add_opt_inner=True, add_opt_outer=False, add_opt_rect=False,
           add_rnd_inner=False, add_rnd_outer=False, J0=None, is_max=False):
     """Find the optimum element of the implicitly given multidimensional array.
